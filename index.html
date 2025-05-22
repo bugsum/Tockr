@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="⏰ Simple analog clock built with HTML, CSS, and JavaScript – responsive, clean code."
+        />
+        <meta
+            name="keywords"
+            content="analog clock, minimalist clock, precise clock, clock web app, HTML CSS JavaScript clock, portfolio project, digital clock, time display"
+        />
+        <meta name="author" content="Samarth Sharma" />
+        <meta name="theme-color" content="#0066cc" />
+        <meta property="og:title" content="Tockr - Analog Clock Web App" />
+        <meta
+            property="og:description"
+            content="⏰ Simple analog clock built with HTML, CSS, and JavaScript – responsive, clean code."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/assets/images/logo.png" />
+        <meta property="og:url" content="https://bugsum.github.io/tockr" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Tockr - Analog Clock Web App" />
+        <meta
+            name="twitter:description"
+            content="⏰ Simple analog clock built with HTML, CSS, and JavaScript – responsive, clean code."
+        />
+        <meta name="twitter:image" content="/assets/images/logo.png" />
+
+        <title>Tockr - Beautiful Analog Clock Web App</title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="/assets/images/logo.png" />
+        <link rel="apple-touch-icon" href="/assets/images/logo.png" />
+
+        <!-- Preload critical assets -->
+        <link rel="preload" href="css/style.css" as="style" />
+        <link rel="preload" href="assets/audio/tick.wav" as="audio" />
+        <link rel="preload" href="assets/images/logo.png" as="image" />
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <main class="container" role="main">
+            <button
+                class="sound-toggle"
+                id="soundToggle"
+                aria-label="Toggle tick sound"
+                aria-pressed="false"
+            >
+                <i class="fas fa-volume-up" aria-hidden="true"></i>
+            </button>
+            <div class="clock-container">
+                <div class="clock" role="timer" aria-label="Analog clock">
+                    <div class="outer-clock-face">
+                        <div class="clock-text">
+                            <div class="brand" aria-label="Brand name">
+                                TOCKR
+                            </div>
+                            <div
+                                class="status-line"
+                                role="status"
+                                aria-label="Current status"
+                            >
+                                <span class="day" aria-label="Current day"
+                                    >THU</span
+                                >
+                                <span
+                                    class="battery"
+                                    aria-label="Battery status"
+                                    >100%</span
+                                >
+                            </div>
+                            <div
+                                class="date-box"
+                                role="status"
+                                aria-label="Current date"
+                            >
+                                MAY 22
+                            </div>
+                            <div
+                                class="time-display"
+                                role="status"
+                                aria-label="Digital time"
+                            >
+                                <span class="time">10:32</span>
+                                <span class="period">AM</span>
+                            </div>
+                        </div>
+                        <div class="hands-container" aria-hidden="true">
+                            <div class="hand hour-hand"></div>
+                            <div class="hand minute-hand"></div>
+                            <div class="hand second-hand"></div>
+                        </div>
+                        <div class="center-point" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer" role="contentinfo">
+            <div class="footer-content">
+                <a
+                    href="https://github.com/bugsum/tockr"
+                    class="github-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View source code on GitHub"
+                >
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                    View on GitHub
+                </a>
+                <div class="footer-credits">
+                    <p>
+                        Made with
+                        <i class="fas fa-heart" aria-hidden="true"></i> by
+                        <span class="author">Samarth Sharma</span>
+                    </p>
+                    <!-- <p class="copyright">
+                        &copy; 2025 Samarth Sharma. All rights reserved.
+                    </p> -->
+                </div>
+            </div>
+        </footer>
+
+        <audio
+            id="tickSound"
+            src="assets/audio/tick.wav"
+            preload="auto"
+            aria-hidden="true"
+        ></audio>
+        <script src="scripts/clock.js" defer></script>
+        <noscript>
+            <p class="error-message">
+                Please enable JavaScript to view this clock.
+            </p>
+        </noscript>
+    </body>
+</html>
