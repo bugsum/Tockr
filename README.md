@@ -32,7 +32,7 @@
 
 ## 📸 Screenshots
 
-<img src="https://placehold.co/400" alt="Analog clock UI screenshot" width="400"/>
+<img src="/assets/images/logo.png" alt="Analog clock UI screenshot" width="400"/>
 
 ---
 
@@ -59,7 +59,7 @@
 To run the project locally:
 
 ```bash
-git clone https://github.com/yourusername/tockr.git
+git clone https://github.com/bugsum/tockr.git
 cd tockr
 open index.html
 ```
